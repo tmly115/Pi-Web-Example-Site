@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Pi-Web - Home</title>
+	</head>
+	<body>
+		<h1>Pi-Web - Quick Reference Guide</h1>
+		<p>
+			This site, which is being hosted on a PiWeb Server, is a Quick Reference Guide to how to create a 
+			Pi-Web Server.
+		</p>
+		<h2>Getting the Package</h2>
+		<p>
+			The Pi-Web package can be found on Github at <a href = "https://github.com/tmly115/Pi-Web"><i>here</i></a>.
+			Download or clone the repositry, and copy and paste the "server" package into your own project folder.
+		</p>
+		<h2>Importing the Package</h2>
+		<p>
+			To import the main Server class use: <b>from server import Server</b>. You can also import the HTML Template
+			Class with <b>from server.html_template import HTML_Template</b>. You do not need the HTML Template Engine but
+			it makes it a lot easier to build webpages with HTML.
+		</p>
+		<h2>Using the Server Class to Create a Web Server - Creating Web Pages</h2>
+		<p>
+			Before you start a Web Server you need to create the web pages. But first you must create the Server Class.
+			<b>server = Server(<i>Host IP</i>, <i>Port Number</i>)</b>. For more information on choosing Port Numbers and
+			Host IP Addresses see . So to create a Web Server on your local machine on the default port (Port 80); you 
+			would use <b>server = Server("127.0.0.1", 80)</b>.
+		</p>
+		<p>
+			Now the instance of <i>Server</i> object can be used to add web pages to the server. To do this use it's 
+			<b>add_page(<i>Url Path</i>, <i>Page's HTML</i>)</b>. So to create a web page at the server's url <i>/index</i>
+			you would use <b>server.add_page("/index", "&lt;h1&gt;Index&lt;/h1&gt;")</b>.
+		</p>
+		<h2>Using the Server Class to Create a Web Server - Starting the Server</h2>
+		<p> 
+			To start the server you need to use the <b>start_server()</b> method and to stop the server using the
+			<b>stop_server()</b> method. So in the program as described you would use: <b>server.start_server()</b>; followed
+			by <b>server.stop_server()</b>. The server will loop infinetly unless disrupted by the user but in case the 
+			<b>start_server()</b> method stops looping due to a bug or crash then the <b>stop_server()</b> method will
+			clean up.
+		</p>
+	</body>
+</html>
