@@ -39,5 +39,19 @@
 			<b>start_server()</b> method stops looping due to a bug or crash then the <b>stop_server()</b> method will
 			clean up.
 		</p>
+		<h2>Checking to Make Sure it Works</h2>
+		<p>
+			To make sure the server works navigate to <a href = "127.0.0.1/index">127.0.0.1</a> in your address bar in your
+			browser. (If you are using a different port to port 80 then it should be 127.0.0.1:<i>port number</i>/index).
+			This should then display: <h1>Index</h1> Or alternatively any other HTML you specified in the second argument of
+			<i>server.add_page()</i>.
+		</p>
+		<h2>Rendering the HTML From a File</h2>
+		<p>
+			It is possible to write 100's of lines of html into a argument the create a web page but it would make much
+			much more sence to write the HTML in an <i>.html</i> file, and then load it into the server to be sent to
+			connecting clients. To do this Pi-Web contains a HTML template engine, that can load and render HTML from
+			files. However, at the moment it is very primitive.
+		</p>
 	</body>
 </html>
